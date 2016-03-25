@@ -17,6 +17,7 @@
 		0E7AFE071C9269AA000EA397 /* SelfiegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE061C9269AA000EA397 /* SelfiegramTests.swift */; };
 		0E7AFE121C9269AA000EA397 /* SelfiegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE111C9269AA000EA397 /* SelfiegramUITests.swift */; };
 		0E93409D1C98F92A00892704 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93409C1C98F92A00892704 /* ProfileViewController.swift */; };
+		0ED7CA841CA43AB7007D1F67 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7CA831CA43AB7007D1F67 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0E7AFE111C9269AA000EA397 /* SelfiegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiegramUITests.swift; sourceTree = "<group>"; };
 		0E7AFE131C9269AA000EA397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E93409C1C98F92A00892704 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0ED7CA831CA43AB7007D1F67 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		0E7AFDF01C9269AA000EA397 /* Selfiegram */ = {
 			isa = PBXGroup;
 			children = (
+				0ED7CA831CA43AB7007D1F67 /* FeedViewController.swift */,
 				0E7AFDF11C9269AA000EA397 /* AppDelegate.swift */,
 				0E7AFDF31C9269AA000EA397 /* ViewController.swift */,
 				0E7AFDF51C9269AA000EA397 /* Main.storyboard */,
@@ -269,6 +272,7 @@
 				0E3457291C9BAE5E0091F810 /* post.swift in Sources */,
 				0E93409D1C98F92A00892704 /* ProfileViewController.swift in Sources */,
 				0E7AFDF41C9269AA000EA397 /* ViewController.swift in Sources */,
+				0ED7CA841CA43AB7007D1F67 /* FeedViewController.swift in Sources */,
 				0E7AFDF21C9269AA000EA397 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
