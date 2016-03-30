@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NTT-Da-gAf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rhi-Ky-xwT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Profile-->
@@ -62,18 +62,52 @@
         <scene sceneID="jnJ-8f-F3l">
             <objects>
                 <tableViewController id="NTT-Da-gAf" customClass="FeedViewController" customModule="Selfiegram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eAt-D6-5ar" userLabel="FeedViewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" id="eAt-D6-5ar" userLabel="FeedViewController">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="Yqw-HL-iSu">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="320" id="Yqw-HL-iSu" customClass="SelfieCell" customModule="Selfiegram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yqw-HL-iSu" id="cPI-oU-XtW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="319.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFK-K3-eI6" userLabel="SelfieImageView">
+                                            <rect key="frame" x="0.0" y="8" width="600" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="250" id="sEW-2m-yXx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-Cp-ubN">
+                                            <rect key="frame" x="0.0" y="261" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0Y-9h-XgC">
+                                            <rect key="frame" x="0.0" y="290" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MhQ-Cp-ubN" firstAttribute="top" secondItem="dFK-K3-eI6" secondAttribute="bottom" constant="3" id="7UW-X2-Q3L"/>
+                                        <constraint firstItem="t0Y-9h-XgC" firstAttribute="leading" secondItem="cPI-oU-XtW" secondAttribute="leading" id="8u3-pe-W3C"/>
+                                        <constraint firstItem="dFK-K3-eI6" firstAttribute="top" secondItem="cPI-oU-XtW" secondAttribute="top" constant="8" id="B9w-dr-Glv"/>
+                                        <constraint firstAttribute="trailing" secondItem="dFK-K3-eI6" secondAttribute="trailing" id="FZH-3o-04C"/>
+                                        <constraint firstItem="MhQ-Cp-ubN" firstAttribute="leading" secondItem="cPI-oU-XtW" secondAttribute="leading" id="GCq-Z0-4Qg"/>
+                                        <constraint firstItem="t0Y-9h-XgC" firstAttribute="top" secondItem="MhQ-Cp-ubN" secondAttribute="bottom" constant="8" id="SeN-e3-qCL"/>
+                                        <constraint firstItem="dFK-K3-eI6" firstAttribute="leading" secondItem="cPI-oU-XtW" secondAttribute="leading" id="qf1-9b-dRt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="t0Y-9h-XgC" id="hhA-X0-ou6"/>
+                                    <outlet property="selfieImageView" destination="dFK-K3-eI6" id="ZM9-fJ-nyK"/>
+                                    <outlet property="usernameLabel" destination="MhQ-Cp-ubN" id="3oM-EQ-8Y9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -85,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHo-OV-Ec7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1424" y="-675"/>
+            <point key="canvasLocation" x="1432" y="-675"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="aip-ID-97Y">
