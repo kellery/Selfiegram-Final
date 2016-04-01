@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class FeedViewController: UITableViewController {
     
 var words = ["Hello", "my", "name", "is","Selfigram"]
